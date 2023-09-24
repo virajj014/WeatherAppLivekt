@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:elevation="0.6dp"
+        >
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:drawablePadding="8dp"/>
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_search_24"
+            app:tint="@color/bg"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/weather_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+
+            android:src="@drawable/sunny"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/temperature_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="40 °C"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jabalpur"
+            android:textSize="28sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/weather_condition_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sunny"
+            android:textSize="18sp"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
